@@ -21,5 +21,6 @@
         <Button Grid.Row="1" Grid.Column="0" Content="OrangeItaliceButton" Style="{Binding Source={StaticResource OrangeItaliceButton}}" />
         <Button Grid.Row="1" Grid.Column="1" Content="GreenObliqueButton" Style="{Binding Source={StaticResource GreenObliqueButton}}" />
         <Button Grid.Row="1" Grid.Column="2" Content="YellowItalicButton" Style="{Binding Source={StaticResource YellowItalicButton}}" />
+        <Button Grid.Row="2" Grid.Column="0" Content="EllipseButtonWithControlTemplate" Style="{Binding Source={StaticResource EllipseButtonWithControlTemplate}}" />
     </Grid>
 </Window>

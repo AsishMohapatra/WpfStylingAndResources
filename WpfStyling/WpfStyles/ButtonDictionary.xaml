@@ -12,8 +12,26 @@
     
 <!-- Style Inheritance-->
     <Style x:Key="GreenObliqueButton" TargetType="Button" BasedOn="{StaticResource OrangeItaliceButton}">
+        <Setter Property="Background" Value="Green"/>
         <Setter Property="Margin" Value="20"/>
         <Setter Property="FontStyle" Value="Italic"></Setter>
+    </Style>
+
+    <Style x:Key="EllipseButtonWithControlTemplate" TargetType="Button" BasedOn="{StaticResource OrangeItaliceButton}">
+        <Setter Property="Template" >
+            <Setter.Value>
+                <!-- Its essential to define the target type of ControlTemplate else the visual will be applied but
+                not the Content-->
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Fill="{TemplateBinding Property=Background}"></Ellipse>
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center">
+                            
+                        </ContentPresenter>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
     </Style>
     
 </ResourceDictionary>
