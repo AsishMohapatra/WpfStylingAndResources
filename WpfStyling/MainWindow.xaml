@@ -1,0 +1,25 @@
+﻿<Window x:Class="WpfStyling.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid Background="Gray" ShowGridLines="True">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Type Of Control" Style="{Binding Source={StaticResource BoldCenterText}}"/>
+        <TextBlock Grid.Row="0" Grid.Column="1" Text="Visual display" Style="{Binding Source={StaticResource BoldCenterText}}"/>
+        <TextBlock Grid.Row="0" Grid.Column="2" Text="Comments" Style="{Binding Source={StaticResource BoldCenterText}}"/>
+        <Button Grid.Row="1" Grid.Column="0" Content="OrangeItaliceButton" Style="{Binding Source={StaticResource OrangeItaliceButton}}" />
+        <Button Grid.Row="1" Grid.Column="1" Content="GreenObliqueButton" Style="{Binding Source={StaticResource GreenObliqueButton}}" />
+        <Button Grid.Row="1" Grid.Column="2" Content="YellowItalicButton" Style="{Binding Source={StaticResource YellowItalicButton}}" />
+    </Grid>
+</Window>

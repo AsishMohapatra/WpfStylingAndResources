@@ -1,0 +1,22 @@
+﻿<Application x:Class="WpfStyling.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <!--Merged Dictionary Example-->
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="WpfStyles\ButtonDictionary.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="WpfStyles\TextBlockDictionary.xaml"></ResourceDictionary>
+                <!--Resource Dictionary can refer to Resource file as well as resources-->
+                <ResourceDictionary>
+                    <Style x:Key="YellowItalicButton" TargetType="Button" BasedOn="{StaticResource GreenObliqueButton}">
+                        <Setter Property="Background" Value="Yellow"/>
+                        <Setter Property="Background" Value="BlueViolet"/>
+                    </Style>
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+    
+</Application>
